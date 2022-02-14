@@ -1,6 +1,6 @@
 import { Card, Card2 } from "../Card/Card";
 
-const List = ({ listTransactions, ButtonTrash, removeItems, SetaSelect }) => {
+const List = ({ listTransactions, ButtonTrash, removeItems }) => {
   return (
     <ul>
       {listTransactions.map((current, index) =>

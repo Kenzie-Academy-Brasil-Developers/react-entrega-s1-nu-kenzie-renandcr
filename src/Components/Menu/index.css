@@ -16,13 +16,9 @@
 }
 
 .menu-div-parent {
-  margin: 120px 0 0 39px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   font-family: var(--font-2);
-  width: 500px;
-  height: 60px;
   box-sizing: border-box;
 }
 .menu-div h3 {
@@ -78,6 +74,24 @@
 .menu-button-despesas:hover {
   background-color: var(--grey-3);
   color: #ffffff;
+}
+@media (max-width: 1000px) {
+  .menu-div-warning {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu-div-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-2);
+    width: 500px;
+    height: 60px;
+    box-sizing: border-box;
+  }
 }
 
 @media (min-width: 1130px) {

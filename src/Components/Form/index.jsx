@@ -4,12 +4,11 @@ import { useState } from "react";
 function Form({ listTransactions, setListTransactions }) {
   const [description, setDescription] = useState("");
   const [type, setType] = useState();
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const [id, setId] = useState(0);
 
   function addNewItem() {
     const item = { description, type, value, id };
-    console.log(typeof item.value);
     if (item.type === "Despesas") {
       item.value *= -1;
     }

@@ -18,13 +18,10 @@ function App() {
 
   const [page, setPage] = useState(true);
 
-  console.log(listTransactions);
-
   const removeItems = (item) => {
     const filterItems = listTransactions.filter(
       (itemCurrent) => itemCurrent.id !== item.id
     );
-
     setListTransactions(filterItems);
   };
 
@@ -32,14 +29,14 @@ function App() {
     const filterItems = listTransactions.filter(
       (itemCurrent) => itemCurrent.type === "Entrada"
     );
-    setListTransactions(filterItems);
+    filterItems.length > 0 && setListTransactions([...filterItems]);
   };
 
   const filterExpenses = () => {
     const filterItems = listTransactions.filter(
       (itemsCurrent) => itemsCurrent.type === "Despesas"
     );
-    setListTransactions(filterItems);
+    filterItems.length > 0 && setListTransactions([...filterItems]);
   };
 
   if (page) {
@@ -58,7 +55,7 @@ function App() {
     <div className="App">
       <Header img={NuKenzie} setPage={setPage} />
       <main>
-        <section>
+        <section className="form-section">
           <Form
             listTransactions={listTransactions}
             setListTransactions={setListTransactions}
@@ -69,7 +66,7 @@ function App() {
             <TotalMoney listTransactions={listTransactions} />
           )}
         </section>
-        <section>
+        <section className="card-section">
           <Menu filterEntries={filterEntries} filterExpenses={filterExpenses} />
 
           {listTransactions.length === 0 && <Warning />}

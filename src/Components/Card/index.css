@@ -14,15 +14,20 @@
   --grey-1: #f8f9fa;
   --grey-0: #f8f9fa;
 }
-
+ul {
+  padding: 0;
+}
+.card-section {
+  margin: 20px 0 50px 0;
+}
 .card-div {
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 8px 15px 15px 15px;
-  width: 500px;
-  height: 87px;
+  width: 350px;
+  height: 70px;
   border-radius: 4px;
   background-color: var(--grey-1);
   box-sizing: border-box;
@@ -89,16 +94,14 @@
   filter: brightness(100);
 }
 
-/* Card2 COMEÇA aqui ***********************************************/
-
 .card-div-2 {
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 8px 15px 15px 15px;
-  width: 500px;
-  height: 87px;
+  width: 350px;
+  height: 70px;
   border-radius: 4px;
   background-color: var(--grey-1);
   box-sizing: border-box;
@@ -110,9 +113,7 @@
   box-shadow: 0 4px 32px -12px #00000065;
   transition: 0.5s;
 }
-/* Card2 TERMINA aqui **********************************************/
 
-/* CardEmpty COMEÇA aqui ************************************/
 .card-div-empty {
   margin-bottom: 30px;
   margin-top: 15px;
@@ -120,8 +121,8 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 8px 15px 15px 15px;
-  width: 500px;
-  height: 87px;
+  width: 350px;
+  height: 70px;
   border-radius: 4px;
   background-color: var(--grey-1);
   box-sizing: border-box;
@@ -130,7 +131,7 @@
 
 .empty-div-um {
   margin-top: 8px;
-  width: 330px;
+  width: 300px;
   height: 13px;
   background-color: var(--gray-2);
 }
@@ -144,10 +145,36 @@
   box-shadow: 0 4px 32px -12px #00000065;
   transition: 0.5s;
 }
-/* CardEmpty TERMINA aqui ***********************************/
 
-/* CardEmpty @media COMEÇA aqui ************************************/
-@media (min-width: 1130px) {
+@media (min-width: 800px) {
+  .card-section {
+    margin: 0px 0 50px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-div-empty {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8px 15px 15px 15px;
+    width: 500px;
+    height: 87px;
+    border-radius: 4px;
+    background-color: var(--grey-1);
+    box-sizing: border-box;
+    border-left: var(--gray-2) 4px solid;
+  }
+  .empty-div-um {
+    margin-top: 8px;
+    width: 330px;
+    height: 13px;
+    background-color: var(--gray-2);
+  }
+}
+@media (min-width: 1000px) {
   .card-div-empty {
     padding: 8px 15px 15px 15px;
     width: 560px;
@@ -155,10 +182,8 @@
     box-sizing: border-box;
   }
 }
-/* CardEmpty @media TERMINA aqui ***********************************/
 
-/* Card2 @media COMEÇA aqui ****************************************/
-@media (min-width: 1130px) {
+@media (min-width: 1000px) {
   .card-div-2 {
     padding: 8px 15px 15px 15px;
     width: 560px;
@@ -166,9 +191,8 @@
     box-sizing: border-box;
   }
 }
-/* Card2 @media TERMINA aqui ***************************************/
 
-@media (min-width: 1130px) {
+@media (min-width: 1000px) {
   .card-div {
     padding: 8px 15px 15px 15px;
     width: 560px;

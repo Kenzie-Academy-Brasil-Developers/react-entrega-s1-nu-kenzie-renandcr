@@ -82,7 +82,7 @@ footer {
   height: 50px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .page-section-right {
     display: none;
   }
